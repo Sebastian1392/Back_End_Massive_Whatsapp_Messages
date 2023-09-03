@@ -1,4 +1,4 @@
-import pywhatkit
+import pywhatkit as kt
 import base64
 from PIL import Image
 from io import BytesIO
@@ -19,14 +19,14 @@ def send_whatsapp_request(message, phones, image, imageName,ipUser):
     delete_image(imageRoute)
 
 def send_message(message, phone):
-    pywhatkit.sendwhatmsg_instantly(
+    kt.sendwhatmsg_instantly(
         phone_no= phone,
         message=message,
         tab_close=True
     )
 
 def send_images(imageRoute, phone):
-    pywhatkit.sendwhats_image(
+    kt.sendwhats_image(
         receiver=phone,
         img_path= imageRoute,
         tab_close=True
